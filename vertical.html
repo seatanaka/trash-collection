@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kode+Mono:wght@400..700&family=Mulish:ital,wght@0,1000;1,1000&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<title>about the Garbage...</title>
+</head>
+<header></header>
+<body>
+<div class="container">
+  <div class="image">
+    <img src="1.PNG" alt="Plastic Bag" onclick="updateDescription(0)">
+  </div>
+  <div class="description">
+    <h2 id="descriptionTitle">Plastic Bag</h2>
+    <p id="descriptionText">Used ziplock plastic bag crumbled on the street.</p>
+  </div>
+</div>
+
+<div class="navigation">
+  <div class="left">
+    <a href="ALL.html" class="ALL">ALL</a>
+  </div>
+  <div class="right">
+    <a href="HOME.html" class="HOME">HOME</a>
+  </div>
+</div>
+
+
+<style>
+
+body {
+  font-family: "Josefin Sans", sans-serif; /* Example font */
+  }
+
+    /* Style for the header */
+    header {
+      border-top: 10px solid black; /* Black border on the top, thicker */
+      height: 4px; /* Adjust the height of the line as needed to match the border thickness */
+    }
+
+.ALL {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.HOME {
+  text-decoration: none;
+  font-weight: bold;
+}
+    
+    .container {
+      display: flex;
+      padding: 5%;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .image {
+      flex: 1;
+      padding-top: 5%;
+    }
+    
+    .description {
+      flex: 1;
+      margin-top: 0;
+      margin-left: 10%;
+      padding: 0 20px;
+      text-align: left;
+
+
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+
+    @media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Change flex-direction to column to stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+  }
+
+  .image {
+    max-width: 80vw; /* Set maximum width of the image to 80% of viewport width */
+    margin: 0 auto; /* Center the image horizontally */
+    margin-top: 5%;
+    padding: 0;
+  }
+
+  .description {
+    margin-top: 15%;
+    width: 100%; /* Make the description full width */
+  }
+}
+
+  
+</style>
+
+<script>
+
+let descriptions = [
+    { title: "Pizza Box", text: "Empty pizza box from Joe's Pizza left on the table." },
+    // Add descriptions for other images here
+  ];
+  
+  function updateDescription(index) {
+    document.getElementById("descriptionTitle").innerText = descriptions[index].title;
+    document.getElementById("descriptionText").innerText = descriptions[index].text;
+  }
+
+  
+  </script>
+  
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kode+Mono:wght@400..700&family=Mulish:ital,wght@0,1000;1,1000&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+
+<title>Garbage Collection!</title>
+<style>
+  body {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+
+}
+
+/* Style for the header */
+header {
+  border-top: 10px solid black; /* Black border on the top, thicker */
+  height: 4px; /* Adjust the height of the line as needed to match the border thickness */
+}
+
+.navigation {
+  display: flex; /* Use flexbox layout */
+  justify-content: space-between; /* Distribute items along the main axis with space between them */
+  padding: 4%; /* Add padding for spacing */
+}
+
+.ALL {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.HOME {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.image {
+  position: absolute; /* Position absolutely relative to the body */
+  top: 50%;
+  left: 57%; /* Center horizontally */
+  transform: translateX(-50%); /* Move back left by 50% of its own width to center */
+  transition: transform 0.5s cubic-bezier(0.1, 0.1, 0.3, 0.3); /* Smooth transition effect with custom timing function */
+}
+
+.image:hover {
+  transform: translateX(-50%) scale(1.1); /* Scale the image on hover */
+}
+
+.explore-more {
+  position: absolute;
+  top: 50%;
+  bottom: 40%;
+  left: 70%;
+  transform: translate(-50%, -50%) rotate(8deg); /* Rotate the text diagonally */
+  font-size: 24px; /* Adjust the font size as needed */
+}
+
+a {
+  color: inherit; /* Use the default text color */
+  text-decoration: none; /* Remove underline */
+}
+
+@media only screen and (max-width: 800px) {
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+  }
+
+  .explore-more {
+    margin-bottom: 10%;
+    font-size: 4vw;
+  }
+
+  .image {
+    position: absolute;
+    margin-top: 10%;
+    bottom: 0; /* Position the image at the bottom of the viewport */
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header></header>
+
+<div class="navigation">
+  <div class="left">
+    <a href="ALL.html" class="ALL">ALL</a>
+  </div>
+  <div class="right">
+    <a href="HOME.html" class="HOME">HOME</a>
+  </div>
+</div>
+
+
+<div class="explore-more">
+  <h1>EXPLORE MORE!</h1>
+</div>
+
+<!-- Image on the lower half of the page -->
+<a href="ALL.html">
+  <img class="image" src="can_green.png" alt="can_green.png">
+</a>
+
+</body>
+</html>
